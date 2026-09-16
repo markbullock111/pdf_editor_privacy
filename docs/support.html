@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Support — PDF Studio</title>
-<meta name="description" content="Help, answers and contact for PDF Studio on iPhone, iPad and Mac.">
+<title>Support — Blackout</title>
+<meta name="description" content="Help, answers and contact for Blackout on iPhone, iPad and Mac.">
 <link rel="icon" href="icon.png">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -13,8 +13,8 @@
 <header class="site">
     <img src="icon.png" alt="">
     <div>
-        <div class="name">PDF Studio</div>
-        <div class="tag">Edit, sign and convert PDFs — offline</div>
+        <div class="name">Blackout</div>
+        <div class="tag">Share documents, not your details</div>
     </div>
     <nav class="site">
         <a href="index.html">Home</a>
@@ -30,95 +30,88 @@ email me — a real person reads it.</p>
 
 <div class="panel">
     <p><strong>Email:</strong>
-       <a href="mailto:admin@vensofts.com?subject=PDF%20Editor%20support">admin@vensofts.com</a></p>
+       <a href="mailto:admin@vensofts.com?subject=Blackout%20support">admin@vensofts.com</a></p>
     <p>It helps to include your device, the iOS or macOS version, and what you
     were doing. If a specific PDF misbehaves and you are able to share it, that
     is the single most useful thing you can send — though never send anything
     confidential.</p>
 </div>
 
-<h2>Editing text</h2>
+<h2>Finding details</h2>
 
-<h3>Tapping text does nothing</h3>
-<p>Turn on the mode first: <strong>Tools ▸ Edit ▸ Edit Text</strong>. A bar
-appears saying "Tap any text to edit it". Without it, tapping selects text
-rather than editing it.</p>
+<h3>It missed something</h3>
+<p>The scan looks for known shapes — account, routing and card numbers, Social
+Security numbers, IBANs, phone numbers, emails, postal addresses, dates of
+birth, passport and ID numbers, faces and barcodes. A reference number with no
+label, or a name it did not recognise, can slip past. Use <strong>Find &amp;
+hide</strong> to remove every occurrence of anything you type, or
+<strong>Mark area</strong> to drag over anything on the page. Both are removed
+exactly like the details the scan found.</p>
 
-<h3>"No editable text there"</h3>
-<p>The page is a scan — a picture of a document with no text layer. Run
-<strong>Tools ▸ Insert ▸ Recognize Text</strong> first. That adds an invisible
-text layer and leaves the page looking exactly the same.</p>
+<h3>It flagged something I want to keep</h3>
+<p>Tap the box on the page, or the switch in the list, to keep it. Names and
+organisations are left in by default for this reason — a pay stub with the
+employer blacked out proves nothing.</p>
 
-<h3>The replacement changed font</h3>
-<p>PDFs usually embed only the letters a document actually uses. If you type a
-character the document's own font does not contain, there is no glyph to draw,
-so the app substitutes a standard font matched to the original's weight and
-style — and tells you when it does. Reusing letters already on the page keeps
-the original font.</p>
+<h3>The boxes on a scan or photo are a little off</h3>
+<p>On a photographed page the text is recognised from the pixels, so the boxes
+are estimates and are drawn slightly larger to compensate. Check the copy on
+the Result screen before sending; use Mark area to cover anything left.</p>
 
-<h3>Long replacements overlap the next words</h3>
-<p>Replacing text keeps the original spacing, so text noticeably longer than what
-it replaced can run into what follows. Shorter or similar-length edits sit
-correctly.</p>
+<h2>What gets removed</h2>
 
-<h2>Redaction</h2>
+<h3>Is the content really gone?</h3>
+<p>Yes. The characters are deleted from the page's content, pixels are erased
+from any image underneath, and any note that overlapped is removed; the file is
+then rewritten from scratch so no earlier version survives inside it. The black
+box is the last step. Open the copy in another app and try to select or copy
+the area: there is nothing there. The app's own test suite proves this on every
+build by reopening prepared copies and inspecting the raw bytes.</p>
 
-<h3>Is redacted content really gone?</h3>
-<p>Yes. The characters are deleted from the page's content stream and the pixels
-are erased from any image underneath, then a black box is drawn on top. Copying,
-searching or extracting text from the result will not recover it. This is the
-difference between redaction and drawing a rectangle.</p>
+<h3>What is "hidden data"?</h3>
+<p>Everything a file carries that is not on the page: title, author, subject,
+the tool that made it and when, XMP metadata, the private data some editors
+tuck inside, the author and text of comments, attached files, scripts, and the
+camera details and GPS position inside embedded photos. "Remove hidden data"
+strips all of it. Pro shows the itemised list under <strong>What's being
+removed</strong>.</p>
 
-<div class="panel">
-    <p><strong>Save a copy first.</strong> Redaction is meant to be irreversible.
-    Undo works while the document is open, but once saved and closed the content
-    is gone — which is the point.</p>
-</div>
+<h3>Why is the copy flattened?</h3>
+<p>Flattening draws comments and form fields into the page so they cannot be
+peeled back off by the recipient. Turn it off on the Prepare screen if you are
+sending a form for someone else to fill in.</p>
 
-<h2>Converting</h2>
+<h2>The copy</h2>
 
-<h3>The Word file lost my layout</h3>
-<p>A PDF stores glyphs at coordinates; it does not record paragraphs, headings or
-tables. Those are reconstructed from where text sits on the page. Tables come
-across as editable Word tables and pictures are embedded, including cells whose
-text wraps over several lines. What does not survive is a page set in two or more
-columns: it is flattened into a single column in reading order. Each format states
-its limits in the app before you commit.</p>
-
-<h3>Images did not come across</h3>
-<p>The Word export embeds the pictures from each page. The PowerPoint export
-carries text only — to keep the visuals there, export as PNG or JPEG images
-instead. A picture drawn smaller than about 8&nbsp;pt is treated as a rule or a
-spacer and left out.</p>
-
-<h3>"This document has no text layer to convert"</h3>
-<p>Same as above — it is a scan. Run Recognize Text first.</p>
-
-<h2>Files and storage</h2>
-
-<h3>Where are my documents?</h3>
-<p>Wherever you opened them from. The app has no library of its own and no cloud
-storage. It opens documents in place through the Files app, so iCloud Drive,
-Dropbox, Google Drive and OneDrive all work if you have those apps installed.</p>
+<h3>Where is my original?</h3>
+<p>Untouched, wherever you opened it from. Blackout never modifies the
+original; every result is a new file, named after the recipient, that you
+share or save from the Result screen.</p>
 
 <h3>Do my documents get uploaded?</h3>
-<p>No. Everything, including conversion and text recognition, runs on your
-device, and the app contains no code that uploads a file. The only thing it
-talks to the internet for is Apple's subscription check, which knows nothing
-about your documents — see the <a href="privacy.html">privacy policy</a>.</p>
+<p>No. Detection, text recognition and face detection run on your device, and
+the app contains no code that uploads a file. The only thing it talks to the
+internet for is Apple's subscription check, which knows nothing about your
+documents — see the <a href="privacy.html">privacy policy</a>.</p>
 
 <h3>A password-protected PDF will not open</h3>
 <p>Enter its password when prompted. If you do not have it, the document cannot
-be opened — the password is what encrypts it, and there is no way around that.
-Some PDFs also carry an <em>owner</em> password restricting printing or copying;
-Apple's PDF engine does not enforce those, so the app does not claim to either.</p>
+be opened — the password is what encrypts it, and there is no way around that.</p>
+
+<h3>The Word copy lost the layout</h3>
+<p>Word is a flowing document and a PDF is a fixed page. Paragraphs, headings,
+tables and pictures are rebuilt; exact positions are not. The details are
+removed before the conversion, never after, so the Word copy carries nothing
+the PDF copy does not.</p>
 
 <h2>Purchases</h2>
 
-<h3>What does Pro unlock?</h3>
-<p>Editing, conversion, redaction, annotations, signatures, page management,
-scanning and text recognition. Reading, searching, navigating and sharing are
-free and always will be.</p>
+<h3>What is free, and what does Pro unlock?</h3>
+<p>The whole job — find, review, remove, strip hidden data, watermark and share
+— is free for three copies a month. Pro removes the limit and adds password
+protection, the itemised hidden-data report, and the optional steps: page
+selection, combining and splitting, stamps, headers, page numbers, signing,
+notes, corrections, and sending as Word, Excel, PowerPoint or images.</p>
 
 <h3>I bought Pro but it is locked</h3>
 <p>Tap <strong>Restore Purchases</strong> on the purchase screen, and check you
@@ -126,12 +119,12 @@ are signed in with the same Apple Account you bought with. Purchases are tied to
 that account, not to the device.</p>
 
 <h3>Is it a subscription?</h3>
-<p>Yes — PDF Studio Pro is US$9.99 per year and renews automatically until you
+<p>Yes — Blackout Pro is US$9.99 per year and renews automatically until you
 cancel. Cancel any time in <strong>Settings ▸ your name ▸ Subscriptions</strong>
 on iPhone and iPad, or <strong>App Store ▸ your name ▸ Account Settings</strong>
-on Mac; you keep Pro until the period you have paid for runs out. Reading stays
-free whether you subscribe or not, and Family Sharing is supported. Full terms
-are on the <a href="terms.html">terms page</a>.</p>
+on Mac; you keep Pro until the period you have paid for runs out. The free
+allowance stays whether you subscribe or not, and Family Sharing is supported.
+Full terms are on the <a href="terms.html">terms page</a>.</p>
 
 <h3>How do I cancel?</h3>
 <p>Open <strong>Settings</strong> in the app and tap <strong>Manage
@@ -146,15 +139,15 @@ first if something is not working — a fix is usually quicker.</p>
 
 <h2>Accessibility</h2>
 <p>The app supports VoiceOver, Dynamic Type, Dark Mode and full keyboard
-navigation on Mac. Read Aloud uses the system voice and works offline. If
+navigation on Mac. Read it back uses the system voice and works offline. If
 something is hard to use with assistive technology, please tell me — those
 reports get priority.</p>
 
 <h2>Still stuck?</h2>
-<p><a class="mail" href="mailto:admin@vensofts.com?subject=PDF%20Editor%20support">Email admin@vensofts.com</a></p>
+<p><a class="mail" href="mailto:admin@vensofts.com?subject=Blackout%20support">Email admin@vensofts.com</a></p>
 
 <footer class="site">
-    <p>PDF Studio for iPhone, iPad and Mac ·
+    <p>Blackout for iPhone, iPad and Mac ·
        <a href="mailto:admin@vensofts.com">admin@vensofts.com</a></p>
     <p>© 2026 Mark Bullock. Not affiliated with Adobe Inc.</p>
 </footer>
